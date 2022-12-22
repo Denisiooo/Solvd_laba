@@ -1,0 +1,34 @@
+package countries;
+
+public class Country {
+    private String name;
+    private String city;
+
+    public Country(String name, String city) {
+        this.name = name;
+        this.city = city;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    @Override
+    public String toString() {
+        return "Country" +
+                "name='" + name + '\'' +
+                ", city='" + city;
+    }
+}
