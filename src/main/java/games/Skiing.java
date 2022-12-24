@@ -13,6 +13,10 @@ public class Skiing {
         this.season = season;
     }
 
+    public Skiing() {
+
+    }
+
     public String getNameOfTheGame() {
         return nameOfTheGame;
     }

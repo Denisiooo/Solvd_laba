@@ -1,5 +1,8 @@
 package games;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Volleyball {
     private String nameOfTheGame;
     private String season;
@@ -13,6 +16,10 @@ public class Volleyball {
         this.numberOfPlayers = numberOfPlayers;
         this.gender = gender;
         this.country = country;
+    }
+
+    public Volleyball() {
+
     }
 
     public String getNameOfTheGame() {
@@ -54,4 +61,8 @@ public class Volleyball {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    List<String> teams = new ArrayList<>();
+
+
 }

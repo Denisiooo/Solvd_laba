@@ -19,6 +19,10 @@ public class Cycling {
         this.country=country;
     }
 
+    public Cycling() {
+
+    }
+
     public String getNameOfTheGame() {
         return nameOfTheGame;
     }

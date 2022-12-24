@@ -15,6 +15,10 @@ public class Hockey {
         this.country = country;
     }
 
+    public Hockey() {
+
+    }
+
     public String getNameOfTheGame() {
         return nameOfTheGame;
     }

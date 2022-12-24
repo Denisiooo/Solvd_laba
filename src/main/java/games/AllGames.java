@@ -7,25 +7,49 @@ import java.util.Random;
 //пробный класс
 
 public class AllGames {
-    Random random = new Random();
-    private Biathlon biathlon;
-    private Cycling cycling;
-    private Hockey hockey;
-    private Skiing skiing;
-    private Volleyball volleyball;
-
-
-    List<Object> list = new ArrayList<>();
-
-    public void addGames(){
-        list.add(biathlon);
-        list.add(cycling);
-        list.add(hockey);
-        list.add(skiing);
-        list.add(volleyball);
-    }
-
-    public void randomGame(){
-        int a = (int) list.get(random.nextInt(list.size()));
-    }
+Biathlon b = new Biathlon();
 }
+
+//    private Biathlon biathlon;
+//    private Cycling cycling;
+//    private Hockey hockey;
+//    private Skiing skiing;
+//    private Volleyball volleyball;
+//
+//    public AllGames() {
+//        this.biathlon = new Biathlon();
+//        this.cycling = new Cycling();
+//    }
+//
+//    public Biathlon getBiathlon() {
+//        return biathlon;
+//    }
+//
+//    public void setBiathlon(Biathlon biathlon) {
+//        this.biathlon = biathlon;
+//    }
+//
+//    public Cycling getCycling() {
+//        return cycling;
+//    }
+//
+//    public void setCycling(Cycling cycling) {
+//        this.cycling = cycling;
+//    }
+
+    //    List<Object> games = new ArrayList<>();
+//
+//    public void addGames(){
+//        games.add(biathlon);
+//        games.add(cycling);
+//        games.add(hockey);
+//        games.add(skiing);
+//        games.add(volleyball);
+//    }
+
+//    public void chooseGame(){
+//        for (Object o: games) {
+//            o = games.get((Integer) o);
+//        }
+//    }
+

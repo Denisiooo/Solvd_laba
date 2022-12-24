@@ -1,6 +1,6 @@
 package games;
 
-public class Biathlon implements Rules{
+public class Biathlon extends AllGames{
     private String nameOfTheGame;
     private String season;
     private String ski;
@@ -15,6 +15,10 @@ public class Biathlon implements Rules{
         this.skiPolesLength = skiPolesLength;
         this.minRifleWeight = minRifleWeight;
         this.country = country;
+    }
+
+    public Biathlon() {
+
     }
 
     public String getNameOfTheGame() {
@@ -65,9 +69,7 @@ public class Biathlon implements Rules{
         this.country = country;
     }
 
-
-    @Override
-    public void rule() {
+    public void rrr(){
 
     }
 }
