@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Random;
 
 //пробный класс
-
-public class AllGames {
-Biathlon b = new Biathlon();
-}
+//
+//public class AllGames {
+//Biathlon b = new Biathlon();
+//}
 
 //    private Biathlon biathlon;
 //    private Cycling cycling;
