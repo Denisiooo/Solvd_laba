@@ -10,7 +10,7 @@ public class Skiing implements GameRounds{
     private String season;
     private String winner;
 
-    public Skiing(String nameOfTheGame, String nameOfSkiing, String country, String season) {
+    public Skiing(String nameOfTheGame, String nameOfSkiing,  String season, String country) {
         this.nameOfTheGame=nameOfTheGame;
         this.nameOfSkiing = nameOfSkiing;
         this.country = country;
@@ -53,6 +53,14 @@ public class Skiing implements GameRounds{
         this.season = season;
     }
 
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setWinner(String winner) {
+        this.winner = winner;
+    }
+
     List<String> allTeams = new ArrayList<>();
     List<String> fourTeams = new ArrayList<>();
     List<String> twoTeams = new ArrayList<>();
@@ -72,10 +80,10 @@ public class Skiing implements GameRounds{
     public void oneEightFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 4; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -106,10 +114,10 @@ public class Skiing implements GameRounds{
     public void oneForthFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 2; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -140,10 +148,10 @@ public class Skiing implements GameRounds{
     public void semiFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 1; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -157,11 +165,12 @@ public class Skiing implements GameRounds{
             count1 += 2;
             count2 += 2;
             if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
-                winner = firstTeam;
+                setWinner(firstTeam);
             } else {
-                winner = firstTeam;
+                setWinner(secondTeam);
             }
+            setNameOfTheGame("Skiing");
         }
-        System.out.println("Competition winner is: " + winner);
+        System.out.println("Competition winner is: " + getWinner());
     }
 }

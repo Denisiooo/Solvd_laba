@@ -1,13 +1,11 @@
 package results;
 
-import competition.Competitors;
-
-public class Result {
-    private Competitors competitors;
-
-    public void results(){
-        competitors.scoreTeams();
-    }
+//public class Result {
+//    private Competitors competitors;
+//
+//    public void results(){
+//        competitors.scoreTeams();
+//    }
 
 
 
@@ -44,5 +42,4 @@ public class Result {
 //    public void setThirdPlaceCount(int thirdPlaceCount) {
 //        this.thirdPlaceCount = thirdPlaceCount;
 //    }
-
-}
+//}

@@ -2,21 +2,18 @@ package games;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Biathlon implements GameRounds {
     private String nameOfTheGame;
     private String season;
-    private String ski;
     private int skiPolesLength;
     private int minRifleWeight;
     private String country;
     private String winner = "";
 
-    public Biathlon(String nameOfTheGame, String season, String ski, int skiPolesLength, int minRifleWeight, String country) {
+    public Biathlon(String nameOfTheGame, String season, int skiPolesLength, int minRifleWeight, String country) {
         this.nameOfTheGame = nameOfTheGame;
         this.season = season;
-        this.ski = ski;
         this.skiPolesLength = skiPolesLength;
         this.minRifleWeight = minRifleWeight;
         this.country = country;
@@ -40,14 +37,6 @@ public class Biathlon implements GameRounds {
 
     public void setSeason(String season) {
         this.season = season;
-    }
-
-    public String getSki() {
-        return ski;
-    }
-
-    public void setSki(String ski) {
-        this.ski = ski;
     }
 
     public int getSkiPolesLength() {
@@ -74,6 +63,14 @@ public class Biathlon implements GameRounds {
         this.country = country;
     }
 
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setWinner(String winner) {
+        this.winner = winner;
+    }
+
     List<String> allTeams = new ArrayList<>();
     List<String> fourTeams = new ArrayList<>();
     List<String> twoTeams = new ArrayList<>();
@@ -93,10 +90,10 @@ public class Biathlon implements GameRounds {
     public void oneEightFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 4; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -127,10 +124,10 @@ public class Biathlon implements GameRounds {
     public void oneForthFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 2; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -161,10 +158,10 @@ public class Biathlon implements GameRounds {
     public void semiFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam ;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 1; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -178,11 +175,15 @@ public class Biathlon implements GameRounds {
             count1 += 2;
             count2 += 2;
             if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
-                winner = firstTeam;
+                setWinner(firstTeam);
             } else {
-                winner = firstTeam;
+                setWinner(secondTeam);
             }
         }
-        System.out.println("Competition winner is: " + winner);
+        System.out.println("Competition winner is: " + getWinner());
+    }
+    public void gameName(){
+        setNameOfTheGame("Biathlon");
+        getWinner();
     }
 }

@@ -7,15 +7,13 @@ public class Hockey implements GameRounds{
     private String nameOfTheGame;
     private int numberOfPlayers;
     private String season;
-    private String fieldDimensions;
     private String country;
     private String winner;
 
-    public Hockey(String nameOfTheGame, int numberOfPlayers, String season, String fieldDimensions, String country) {
+    public Hockey(String nameOfTheGame, int numberOfPlayers, String season, String country) {
         this.nameOfTheGame=nameOfTheGame;
         this.numberOfPlayers = numberOfPlayers;
         this.season = season;
-        this.fieldDimensions = fieldDimensions;
         this.country = country;
     }
 
@@ -47,20 +45,20 @@ public class Hockey implements GameRounds{
         this.season = season;
     }
 
-    public String getFieldDimensions() {
-        return fieldDimensions;
-    }
-
-    public void setFieldDimensions(String fieldDimensions) {
-        this.fieldDimensions = fieldDimensions;
-    }
-
     public String getCountry() {
         return country;
     }
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public String getWinner() {
+        return winner;
+    }
+
+    public void setWinner(String winner) {
+        this.winner = winner;
     }
 
     List<String> allTeams = new ArrayList<>();
@@ -82,10 +80,10 @@ public class Hockey implements GameRounds{
     public void oneEightFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 4; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -116,10 +114,10 @@ public class Hockey implements GameRounds{
     public void oneForthFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 2; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -150,10 +148,10 @@ public class Hockey implements GameRounds{
     public void semiFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam = "";
-        String secondTeam = "";
-        int numberOfPoint_FirstTeam = 0;
-        int numberOfPoint_SecondTeam = 0;
+        String firstTeam;
+        String secondTeam;
+        int numberOfPoint_FirstTeam;
+        int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 1; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -167,11 +165,12 @@ public class Hockey implements GameRounds{
             count1 += 2;
             count2 += 2;
             if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
-                winner = firstTeam;
+                setWinner(firstTeam);
             } else {
-                winner = firstTeam;
+                setWinner(secondTeam);
             }
+            setNameOfTheGame("Hockey");
         }
-        System.out.println("Competition winner is: " + winner);
+        System.out.println("Competition winner is: " + getWinner());
     }
 }

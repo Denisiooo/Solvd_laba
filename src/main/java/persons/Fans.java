@@ -5,8 +5,7 @@ public class Fans extends Person{
     private String partOfCompetition;
     private String gameType;
 
-    public Fans(String nameOfPerson,String surnameOfPerson, int numberOfFans, String partOfCompetition, String gameType) {
-        super(nameOfPerson, surnameOfPerson);
+    public Fans(int numberOfFans, String partOfCompetition, String gameType) {
         this.numberOfFans = numberOfFans;
         this.partOfCompetition = partOfCompetition;
         this.gameType = gameType;
