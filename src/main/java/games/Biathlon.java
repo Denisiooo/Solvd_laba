@@ -1,21 +1,21 @@
 package games;
 
-import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Biathlon{
+public class Biathlon implements GameRounds {
     private String nameOfTheGame;
     private String season;
     private String ski;
     private int skiPolesLength;
     private int minRifleWeight;
     private String country;
+    private String winner = "";
 
     public Biathlon(String nameOfTheGame, String season, String ski, int skiPolesLength, int minRifleWeight, String country) {
-        this.nameOfTheGame=nameOfTheGame;
-        this.season=season;
+        this.nameOfTheGame = nameOfTheGame;
+        this.season = season;
         this.ski = ski;
         this.skiPolesLength = skiPolesLength;
         this.minRifleWeight = minRifleWeight;
@@ -74,64 +74,115 @@ public class Biathlon{
         this.country = country;
     }
 
-    List<String> teams = new ArrayList<>();
+    List<String> allTeams = new ArrayList<>();
+    List<String> fourTeams = new ArrayList<>();
+    List<String> twoTeams = new ArrayList<>();
 
-    public void addTeam(){
-        teams.add("Kassiopea");
-        teams.add("Dragon");
-        teams.add("Lion");
-        teams.add("Centavr");
-        teams.add("Vodoley");
-        teams.add("Pegas");
-        teams.add("Orion");
-        teams.add("Bear");
-        teams.add("Birds");
-        teams.add("Tiger");
+    public void addTeam() {
+        allTeams.add("Kassiopea");
+        allTeams.add("Dragon");
+        allTeams.add("Lion");
+        allTeams.add("Centavr");
+        allTeams.add("Vodoley");
+        allTeams.add("Pegas");
+        allTeams.add("Orion");
+        allTeams.add("Bear");
     }
 
-    public void gameStart(){
-        Random random = new Random();
+    @Override
+    public void oneEightFinal() {
         int count1 = 0;
         int count2 = 1;
         String firstTeam = "";
         String secondTeam = "";
         int numberOfPoint_FirstTeam = 0;
         int numberOfPoint_SecondTeam = 0;
-        List<String> winners = new ArrayList<>();
-        List<String> losers = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
-            numberOfPoint_FirstTeam = (int)(Math.random()*3);
-            numberOfPoint_SecondTeam = (int)(Math.random()*3);
-
-                firstTeam = teams.get(count1);
-                secondTeam = teams.get(count2);
-                count1+=2;
-                count2+=2;
-
-
-
-            if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam){
-                winners.add(firstTeam);
-                losers.add(secondTeam);
-            }else if(numberOfPoint_FirstTeam < numberOfPoint_SecondTeam){
-                winners.add(secondTeam);
-                losers.add(firstTeam);
-            }else {
-                losers.add(firstTeam);
-                losers.add(secondTeam);
+        for (int i = 0; i < 4; i++) {
+            numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+            numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            while (numberOfPoint_FirstTeam == numberOfPoint_SecondTeam) {
+                numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+                numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            }
+            firstTeam = allTeams.get(count1);
+            secondTeam = allTeams.get(count2);
+            count1 += 2;
+            count2 += 2;
+            if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
+                fourTeams.add(firstTeam);
+            } else {
+                fourTeams.add(secondTeam);
             }
         }
-        System.out.println("Winners");
-        for (String s: winners) {
+        System.out.println("Winners of the one-eighth final");
+        for (String s : fourTeams) {
             System.out.print(s + " ");
         }
         System.out.println();
-        System.out.println("--------------------------------");
-        System.out.println("Losers");
-        for (String s1: losers) {
-            System.out.print(s1 + " ");
+        System.out.println("---------------------------------------------------------------");
+    }
 
+    @Override
+    public void oneForthFinal() {
+        int count1 = 0;
+        int count2 = 1;
+        String firstTeam = "";
+        String secondTeam = "";
+        int numberOfPoint_FirstTeam = 0;
+        int numberOfPoint_SecondTeam = 0;
+
+        for (int i = 0; i < 2; i++) {
+            numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+            numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            while (numberOfPoint_FirstTeam == numberOfPoint_SecondTeam) {
+                numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+                numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            }
+            firstTeam = fourTeams.get(count1);
+            secondTeam = fourTeams.get(count2);
+            count1 += 2;
+            count2 += 2;
+            if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
+                twoTeams.add(firstTeam);
+            } else {
+                twoTeams.add(secondTeam);
+            }
         }
+        System.out.println("Winners of the one-forth final");
+        for (String s : twoTeams) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+        System.out.println("---------------------------------------------------------------");
+    }
+
+    @Override
+    public void semiFinal() {
+        int count1 = 0;
+        int count2 = 1;
+        String firstTeam = "";
+        String secondTeam = "";
+        int numberOfPoint_FirstTeam = 0;
+        int numberOfPoint_SecondTeam = 0;
+
+        for (int i = 0; i < 1; i++) {
+            numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+            numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            while (numberOfPoint_FirstTeam == numberOfPoint_SecondTeam) {
+                numberOfPoint_FirstTeam = (int) (Math.random() * 3);
+                numberOfPoint_SecondTeam = (int) (Math.random() * 3);
+            }
+            firstTeam = twoTeams.get(count1);
+            secondTeam = twoTeams.get(count2);
+            count1 += 2;
+            count2 += 2;
+            if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
+                winner = firstTeam;
+            } else {
+                winner = firstTeam;
+            }
+        }
+        System.out.println("Competition winner is: " + winner);
     }
 }
