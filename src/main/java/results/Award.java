@@ -32,19 +32,19 @@ public class Award{
         this.prizeFund = prizeFund;
     }
 
-    public void prizeDistribution(){
-        b.qw();
-        if(b.getNameOfTheGame().equals("Biathlon")){
-            System.out.println("Team " + b.getWinner() + " are rewarded with a trophy and $100,000");
-        }else if(c.getNameOfTheGame().equals("Cycling")){
-            System.out.println("Team " + c.getWinner() + " are rewarded with a trophy and $100,000");
-        }else if(h.getNameOfTheGame().equals("Hockey")){
-            System.out.println("Team " + h.getWinner() + " are rewarded with a trophy and $100,000");
-        }else if(s.getNameOfTheGame().equals("Skiing")){
-            System.out.println("Team " + s.getWinner() + " are rewarded with a trophy and $100,000");
-        }else {
-            System.out.println("Team " + v.getWinner() + " are rewarded with a trophy and $100,000");
+    public void prizeDistribution(Sport sport) {
+//        b.qw();
+        if (sport.getCurrentSport().equals("Biathlon")) {
+            System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+//        }else if(c.getNameOfTheGame().equals("Cycling")){
+//            System.out.println("Team " + c.getWinner() + " are rewarded with a trophy and $100,000");
+//        }else if(h.getNameOfTheGame().equals("Hockey")){
+//            System.out.println("Team " + h.getWinner() + " are rewarded with a trophy and $100,000");
+//        }else if(s.getNameOfTheGame().equals("Skiing")){
+//            System.out.println("Team " + s.getWinner() + " are rewarded with a trophy and $100,000");
+//        }else {
+//            System.out.println("Team " + v.getWinner() + " are rewarded with a trophy and $100,000");
+//        }
         }
     }
-
 }

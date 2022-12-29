@@ -3,15 +3,15 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Biathlon implements GameRounds {
+public final class Biathlon extends Sport implements GameRounds {
     private String nameOfTheGame;
     private String season;
     private int skiPolesLength;
     private int minRifleWeight;
     private String country;
-    public String winner; // проблема
 
     public Biathlon(String nameOfTheGame, String season, int skiPolesLength, int minRifleWeight, String country) {
+        super(nameOfTheGame);
         this.nameOfTheGame = nameOfTheGame;
         this.season = season;
         this.skiPolesLength = skiPolesLength;
@@ -20,7 +20,7 @@ public final class Biathlon implements GameRounds {
     }
 
     public Biathlon() {
-
+        super("Biathlon");
     }
 
     public String getNameOfTheGame() {
@@ -63,13 +63,7 @@ public final class Biathlon implements GameRounds {
         this.country = country;
     }
 
-    public String getWinner() {
-        return winner;
-    }
 
-    public void setWinner(String winner) {
-        this.winner = winner;
-    }
 
     List<String> allTeams = new ArrayList<>();
     List<String> fourTeams = new ArrayList<>();
@@ -176,6 +170,7 @@ public final class Biathlon implements GameRounds {
             count2 += 2;
             if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
                 setWinner(firstTeam);
+
             } else {
                 setWinner(secondTeam);
             }

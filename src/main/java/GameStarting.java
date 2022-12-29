@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 
 public class GameStarting {
     public static void main(String[] args) {
-
         Award award = new Award("Cup", 100000);
         System.out.println("Choose a sport to start the competition: ");
         System.out.println("1 - Biathlon;\n2 - Cycling;\n3 - Hockey;\n4 - Skiing;\n5 - Volleyball.");
@@ -24,7 +23,7 @@ public class GameStarting {
                 b.oneEightFinal();
                 b.oneForthFinal();
                 b.semiFinal();
-//                award.prizeDistribution();
+                award.prizeDistribution(b);
             }
             case 2 -> {
                 Cycling c = new Cycling("Cycling", "summer", "highway", 300, "asphalt", "USA");
