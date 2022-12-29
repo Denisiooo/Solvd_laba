@@ -3,7 +3,7 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Skiing implements GameRounds{
+public final class Skiing implements GameRounds{
     private String nameOfTheGame;
     private String nameOfSkiing;
     private String country;

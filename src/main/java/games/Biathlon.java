@@ -3,13 +3,13 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Biathlon implements GameRounds {
+public final class Biathlon implements GameRounds {
     private String nameOfTheGame;
     private String season;
     private int skiPolesLength;
     private int minRifleWeight;
     private String country;
-    private String winner = "";
+    public String winner; // проблема
 
     public Biathlon(String nameOfTheGame, String season, int skiPolesLength, int minRifleWeight, String country) {
         this.nameOfTheGame = nameOfTheGame;
@@ -182,8 +182,8 @@ public class Biathlon implements GameRounds {
         }
         System.out.println("Competition winner is: " + getWinner());
     }
-    public void gameName(){
+
+    public void qw(){
         setNameOfTheGame("Biathlon");
-        getWinner();
     }
 }

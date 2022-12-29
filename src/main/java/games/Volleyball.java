@@ -3,7 +3,7 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Volleyball implements GameRounds{
+public final class Volleyball implements GameRounds{
     private String nameOfTheGame;
     private String season;
     private int numberOfPlayers;

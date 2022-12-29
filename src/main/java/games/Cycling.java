@@ -4,7 +4,7 @@ import javax.sql.rowset.spi.SyncResolver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cycling implements GameRounds{
+public final class Cycling implements GameRounds{
     private String nameOfTheGame;
     private String season;
     private String raceType;
@@ -101,10 +101,10 @@ public class Cycling implements GameRounds{
     public void oneEightFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam;
-        String secondTeam;
-        int numberOfPoint_FirstTeam;
-        int numberOfPoint_SecondTeam;
+        String firstTeam = "";
+        String secondTeam = "";
+        int numberOfPoint_FirstTeam = 0;
+        int numberOfPoint_SecondTeam = 0;
 
         for (int i = 0; i < 4; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -135,10 +135,10 @@ public class Cycling implements GameRounds{
     public void oneForthFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam;
-        String secondTeam;
-        int numberOfPoint_FirstTeam;
-        int numberOfPoint_SecondTeam;
+        String firstTeam = "";
+        String secondTeam = "";
+        int numberOfPoint_FirstTeam = 0;
+        int numberOfPoint_SecondTeam = 0;
 
         for (int i = 0; i < 2; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -169,10 +169,10 @@ public class Cycling implements GameRounds{
     public void semiFinal() {
         int count1 = 0;
         int count2 = 1;
-        String firstTeam;
-        String secondTeam;
-        int numberOfPoint_FirstTeam;
-        int numberOfPoint_SecondTeam;
+        String firstTeam = "";
+        String secondTeam = "";
+        int numberOfPoint_FirstTeam = 0;
+        int numberOfPoint_SecondTeam = 0;
 
         for (int i = 0; i < 1; i++) {
             numberOfPoint_FirstTeam = (int) (Math.random() * 3);
@@ -188,9 +188,8 @@ public class Cycling implements GameRounds{
             if (numberOfPoint_FirstTeam > numberOfPoint_SecondTeam) {
                 setWinner(firstTeam);
             } else {
-                setWinner(secondTeam);
+                setWinner(firstTeam);
             }
-            setNameOfTheGame("Cycling");
         }
         System.out.println("Competition winner is: " + getWinner());
     }

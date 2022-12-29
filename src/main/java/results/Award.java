@@ -2,7 +2,7 @@ package results;
 
 import games.*;
 
-public class Award {
+public class Award{
     Biathlon b = new Biathlon();
     Cycling c = new Cycling();
     Hockey h = new Hockey();
@@ -33,7 +33,7 @@ public class Award {
     }
 
     public void prizeDistribution(){
-        b.gameName();
+        b.qw();
         if(b.getNameOfTheGame().equals("Biathlon")){
             System.out.println("Team " + b.getWinner() + " are rewarded with a trophy and $100,000");
         }else if(c.getNameOfTheGame().equals("Cycling")){

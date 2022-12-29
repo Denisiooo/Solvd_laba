@@ -1,27 +1,48 @@
 package persons;
 
 public class Volunteers {
-    private double numberOfVolunteers;
-    private String kindOfActivity;
+    private final int numberOfVolunteers = 5000;
+    Volont v = Volont.AWARDING;
+    Volont v2 = Volont.LOGISTICS;
+    Volont v3 = Volont.MARKETING;
+    Volont v4 = Volont.DOPING_CONTROL;
+    Volont v5 = Volont.TRANSPORT;
 
-    public Volunteers(double numberOfVolunteers, String kindOfActivity) {
-        this.numberOfVolunteers = numberOfVolunteers;
-        this.kindOfActivity = kindOfActivity;
+    public void volontAwarding(){
+        System.out.println(v.getActivity());
     }
 
-    public double getNumberOfVolunteers() {
-        return numberOfVolunteers;
+    public void volontLogistic(){
+        System.out.println(v2.getActivity());
     }
 
-    public void setNumberOfVolunteers(double numberOfVolunteers) {
-        this.numberOfVolunteers = numberOfVolunteers;
+    public void volontMarketing(){
+        System.out.println(v3.getActivity());
     }
 
-    public String getKindOfActivity() {
-        return kindOfActivity;
+    public void volontDopingControl(){
+        System.out.println(v4.getActivity());
     }
 
-    public void setKindOfActivity(String kindOfActivity) {
-        this.kindOfActivity = kindOfActivity;
+    public void volontTransport(){
+        System.out.println(v5.getActivity());
     }
+
+//    private String kindOfActivity;
+//
+//    public Volunteers(String kindOfActivity) {
+//        this.kindOfActivity = kindOfActivity;
+//    }
+//
+//    public double getNumberOfVolunteers() {
+//        return numberOfVolunteers;
+//    }
+//
+//    public String getKindOfActivity() {
+//        return kindOfActivity;
+//    }
+//
+//    public void setKindOfActivity(String kindOfActivity) {
+//        this.kindOfActivity = kindOfActivity;
+//    }
 }
