@@ -1,7 +1,7 @@
 package persons;
 
 public class Volunteers {
-    private final int numberOfVolunteers = 5000;
+    private final static int numberOfVolunteers = 5000;
     Volont v = Volont.AWARDING;
     Volont v2 = Volont.LOGISTICS;
     Volont v3 = Volont.MARKETING;

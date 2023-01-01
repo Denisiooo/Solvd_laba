@@ -1,5 +1,7 @@
 package games;
 
+import exceptions.TeamsNullException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,20 +66,19 @@ public final class Biathlon extends Sport implements GameRounds {
     }
 
 
-
     List<String> allTeams = new ArrayList<>();
     List<String> fourTeams = new ArrayList<>();
     List<String> twoTeams = new ArrayList<>();
 
     public void addTeam() {
-        allTeams.add("Kassiopea");
-        allTeams.add("Dragon");
-        allTeams.add("Lion");
-        allTeams.add("Centavr");
-        allTeams.add("Vodoley");
-        allTeams.add("Pegas");
-        allTeams.add("Orion");
-        allTeams.add("Bear");
+//        allTeams.add("Kassiopea");
+//        allTeams.add("Dragon");
+//        allTeams.add("Lion");
+//        allTeams.add("Centavr");
+//        allTeams.add("Vodoley");
+//        allTeams.add("Pegas");
+//        allTeams.add("Orion");
+//        allTeams.add("Bear");
     }
 
     @Override
@@ -154,7 +155,7 @@ public final class Biathlon extends Sport implements GameRounds {
         int count2 = 1;
         String firstTeam;
         String secondTeam;
-        int numberOfPoint_FirstTeam ;
+        int numberOfPoint_FirstTeam;
         int numberOfPoint_SecondTeam;
 
         for (int i = 0; i < 1; i++) {
@@ -176,9 +177,5 @@ public final class Biathlon extends Sport implements GameRounds {
             }
         }
         System.out.println("Competition winner is: " + getWinner());
-    }
-
-    public void qw(){
-        setNameOfTheGame("Biathlon");
     }
 }

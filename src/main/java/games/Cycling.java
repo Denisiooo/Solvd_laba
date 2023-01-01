@@ -4,26 +4,26 @@ import javax.sql.rowset.spi.SyncResolver;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Cycling implements GameRounds{
+public final class Cycling extends Sport implements GameRounds {
     private String nameOfTheGame;
     private String season;
     private String raceType;
     private int distance;
     private String trackType;
     private String country;
-    private String winner;
 
     public Cycling(String nameOfTheGame, String season, String raceType, int distance, String trackType, String country) {
-        this.nameOfTheGame=nameOfTheGame;
-        this.season=season;
+        super(nameOfTheGame);
+        this.nameOfTheGame = nameOfTheGame;
+        this.season = season;
         this.raceType = raceType;
         this.distance = distance;
         this.trackType = trackType;
-        this.country=country;
+        this.country = country;
     }
 
     public Cycling() {
-
+        super("Cycling");
     }
 
     public String getNameOfTheGame() {
@@ -72,14 +72,6 @@ public final class Cycling implements GameRounds{
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public String getWinner() {
-        return winner;
-    }
-
-    public void setWinner(String winner) {
-        this.winner = winner;
     }
 
     List<String> allTeams = new ArrayList<>();

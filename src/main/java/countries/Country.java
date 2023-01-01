@@ -11,6 +11,10 @@ public class Country {
         this.city = city;
     }
 
+    public Country() {
+
+    }
+
     public String getName() {
         return name;
     }

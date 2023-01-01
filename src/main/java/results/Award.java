@@ -2,12 +2,7 @@ package results;
 
 import games.*;
 
-public class Award{
-    Biathlon b = new Biathlon();
-    Cycling c = new Cycling();
-    Hockey h = new Hockey();
-    Skiing s = new Skiing();
-    Volleyball v = new Volleyball();
+public class Award {
     private String kindOfAward;
     private int prizeFund;
 
@@ -32,19 +27,13 @@ public class Award{
         this.prizeFund = prizeFund;
     }
 
-    public void prizeDistribution(Sport sport) {
-//        b.qw();
-        if (sport.getCurrentSport().equals("Biathlon")) {
-            System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
-//        }else if(c.getNameOfTheGame().equals("Cycling")){
-//            System.out.println("Team " + c.getWinner() + " are rewarded with a trophy and $100,000");
-//        }else if(h.getNameOfTheGame().equals("Hockey")){
-//            System.out.println("Team " + h.getWinner() + " are rewarded with a trophy and $100,000");
-//        }else if(s.getNameOfTheGame().equals("Skiing")){
-//            System.out.println("Team " + s.getWinner() + " are rewarded with a trophy and $100,000");
-//        }else {
-//            System.out.println("Team " + v.getWinner() + " are rewarded with a trophy and $100,000");
-//        }
+    public static void prizeDistribution(Sport sport) {
+        switch (sport.getCurrentSport()) {
+            case "Biathlon" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Cycling" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Hockey" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Skiing" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            default -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
         }
     }
 }

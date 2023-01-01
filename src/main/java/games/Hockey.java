@@ -3,7 +3,7 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Hockey implements GameRounds{
+public final class Hockey extends Sport implements GameRounds {
     private String nameOfTheGame;
     private int numberOfPlayers;
     private String season;
@@ -11,14 +11,15 @@ public final class Hockey implements GameRounds{
     private String winner;
 
     public Hockey(String nameOfTheGame, int numberOfPlayers, String season, String country) {
-        this.nameOfTheGame=nameOfTheGame;
+        super(nameOfTheGame);
+        this.nameOfTheGame = nameOfTheGame;
         this.numberOfPlayers = numberOfPlayers;
         this.season = season;
         this.country = country;
     }
 
     public Hockey() {
-
+        super("Hockey");
     }
 
     public String getNameOfTheGame() {

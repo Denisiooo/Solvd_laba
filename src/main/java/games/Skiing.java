@@ -3,22 +3,23 @@ package games;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Skiing implements GameRounds{
+public final class Skiing extends Sport implements GameRounds {
     private String nameOfTheGame;
     private String nameOfSkiing;
     private String country;
     private String season;
     private String winner;
 
-    public Skiing(String nameOfTheGame, String nameOfSkiing,  String season, String country) {
-        this.nameOfTheGame=nameOfTheGame;
+    public Skiing(String nameOfTheGame, String nameOfSkiing, String season, String country) {
+        super(nameOfSkiing);
+        this.nameOfTheGame = nameOfTheGame;
         this.nameOfSkiing = nameOfSkiing;
         this.country = country;
         this.season = season;
     }
 
     public Skiing() {
-
+        super("Skiing");
     }
 
     public String getNameOfTheGame() {
