@@ -1,9 +1,14 @@
 package games;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public final class Hockey extends Sport implements GameRounds {
+    static final Logger LOGGER = LogManager.getLogger(Hockey.class);
+
     private String nameOfTheGame;
     private int numberOfPlayers;
     private String season;
@@ -103,10 +108,11 @@ public final class Hockey extends Sport implements GameRounds {
                 fourTeams.add(secondTeam);
             }
         }
-        System.out.println("Winners of the one-eighth final");
-        for (String s : fourTeams) {
-            System.out.print(s + " ");
-        }
+        LOGGER.info("Winners of the one-eighth final");
+        LOGGER.info(fourTeams);
+//        for (String s : fourTeams) {
+//            System.out.print(s + " ");
+//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
@@ -137,10 +143,11 @@ public final class Hockey extends Sport implements GameRounds {
                 twoTeams.add(secondTeam);
             }
         }
-        System.out.println("Winners of the one-forth final");
-        for (String s : twoTeams) {
-            System.out.print(s + " ");
-        }
+        LOGGER.info("Winners of the one-forth final");
+        LOGGER.info(twoTeams);
+//        for (String s : twoTeams) {
+//            System.out.print(s + " ");
+//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
@@ -170,8 +177,7 @@ public final class Hockey extends Sport implements GameRounds {
             } else {
                 setWinner(secondTeam);
             }
-            setNameOfTheGame("Hockey");
         }
-        System.out.println("Competition winner is: " + getWinner());
+        LOGGER.info("Competition winner is: " + getWinner());
     }
 }

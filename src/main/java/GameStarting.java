@@ -2,23 +2,27 @@ import exceptions.TeamsNullException;
 import games.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import persons.Referee;
+import persons.VoluntActivity;
+import persons.Volunteers;
 import results.Award;
 
 import java.util.Scanner;
 
 public class GameStarting {
-
     private static final Logger LOGGER = LogManager.getLogger(GameStarting.class);
 
     public static void main(String[] args) throws Exception {
         LOGGER.info("Choose a sport to start the competition: ");
-        System.out.println("1 - Biathlon;\n2 - Cycling;\n3 - Hockey;\n4 - Skiing;\n5 - Volleyball.");
+        LOGGER.info("\n1 - Biathlon;\n2 - Cycling;\n3 - Hockey;\n4 - Skiing;\n5 - Volleyball.");
         Scanner scanner = new Scanner(System.in);
         int numberOfSport = scanner.nextInt();
         switch (numberOfSport) {
             case 1 -> {
                 Biathlon b = new Biathlon("Biathlon", "winter", 12, 3, "Belarus");
-                System.out.println("You have chosen Biathlon");
+                Volunteers vol = new Volunteers("Belarus", "Minsk", VoluntActivity.MARKETING);
+                Referee.randomName();
+                LOGGER.info("You have chosen Biathlon");
                 b.addTeam();
                 if (b.getAllTeams().size() < 8) {
                     throw new TeamsNullException("Numbers of teams should be eight");

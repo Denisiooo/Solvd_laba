@@ -1,6 +1,5 @@
 package games;
 
-import exceptions.TeamsNullException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -8,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Biathlon extends Sport implements GameRounds {
-//    static final Logger logger = LogManager.getLogger(Biathlon.class);
+    static final Logger LOGGER = LogManager.getLogger(Biathlon.class);
 
     private String nameOfTheGame;
     private String season;
@@ -97,7 +96,7 @@ public final class Biathlon extends Sport implements GameRounds {
     }
 
     @Override
-    public void oneEightFinal() throws TeamsNullException {
+    public void oneEightFinal(){
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -122,11 +121,11 @@ public final class Biathlon extends Sport implements GameRounds {
                 fourTeams.add(secondTeam);
             }
         }
-        System.out.println("Winners of the one-eighth final");
-//        System.out.println(fourTeams);
-        for (String s : fourTeams) {
-            System.out.print(s + " ");
-        }
+        LOGGER.info("Winners of the one-eighth final");
+        LOGGER.info(fourTeams);
+//        for (String s : fourTeams) {
+//            System.out.print(s + " ");
+//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
 
@@ -158,11 +157,11 @@ public final class Biathlon extends Sport implements GameRounds {
                 twoTeams.add(secondTeam);
             }
         }
-        System.out.println("Winners of the one-forth final");
-//        System.out.println(twoTeams);
-        for (String s : twoTeams) {
-            System.out.print(s + " ");
-        }
+        LOGGER.info("Winners of the one-forth final");
+        LOGGER.info(twoTeams);
+//        for (String s : twoTeams) {
+//            System.out.print(s + " ");
+//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
@@ -194,6 +193,6 @@ public final class Biathlon extends Sport implements GameRounds {
                 setWinner(secondTeam);
             }
         }
-        System.out.println("Competition winner is: " + getWinner());
+        LOGGER.info("Competition winner is: " + getWinner());
     }
 }

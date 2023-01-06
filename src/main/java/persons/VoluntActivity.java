@@ -1,6 +1,6 @@
 package persons;
 
-public enum Volont {
+public enum VoluntActivity {
     LOGISTICS("Logistic"),
     MARKETING("Marketing"),
     AWARDING("Awarding"),
@@ -9,11 +9,18 @@ public enum Volont {
 
     private String activity;
 
-    Volont(String activity) {
+    VoluntActivity(String activity) {
         this.activity = activity;
     }
 
-    public String getActivity(){
+    public String getActivity() {
         return activity;
+    }
+
+    @Override
+    public String toString() {
+        return "VoluntActivity{" +
+                "activity='" + activity + '\'' +
+                '}';
     }
 }

@@ -1,48 +1,22 @@
 package persons;
 
-public class Volunteers {
+import countries.Country;
+
+public class Volunteers extends Country {
     private final static int numberOfVolunteers = 5000;
-    Volont v = Volont.AWARDING;
-    Volont v2 = Volont.LOGISTICS;
-    Volont v3 = Volont.MARKETING;
-    Volont v4 = Volont.DOPING_CONTROL;
-    Volont v5 = Volont.TRANSPORT;
+    VoluntActivity volActivity;
+    Country country;
 
-    public void volontAwarding(){
-        System.out.println(v.getActivity());
+    public Volunteers(String countryName, String city, VoluntActivity activity) {
+        super(countryName, city);
+        volActivity = activity;
     }
 
-    public void volontLogistic(){
-        System.out.println(v2.getActivity());
+    public VoluntActivity getVolActivity() {
+        return volActivity;
     }
 
-    public void volontMarketing(){
-        System.out.println(v3.getActivity());
+    public Country getCountry() {
+        return country;
     }
-
-    public void volontDopingControl(){
-        System.out.println(v4.getActivity());
-    }
-
-    public void volontTransport(){
-        System.out.println(v5.getActivity());
-    }
-
-//    private String kindOfActivity;
-//
-//    public Volunteers(String kindOfActivity) {
-//        this.kindOfActivity = kindOfActivity;
-//    }
-//
-//    public double getNumberOfVolunteers() {
-//        return numberOfVolunteers;
-//    }
-//
-//    public String getKindOfActivity() {
-//        return kindOfActivity;
-//    }
-//
-//    public void setKindOfActivity(String kindOfActivity) {
-//        this.kindOfActivity = kindOfActivity;
-//    }
 }

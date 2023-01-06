@@ -3,10 +3,16 @@ package games;
 public class Sport {
     protected String winner;
     protected String currentSport;
+    private AllGames games;
 
     public Sport(String currentSport) {
         this.currentSport = currentSport;
     }
+
+    public Sport(AllGames allGames) {
+        this.games = allGames;
+    }
+
 
     public String getCurrentSport() {
         return currentSport;

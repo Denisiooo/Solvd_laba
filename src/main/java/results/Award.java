@@ -1,8 +1,12 @@
 package results;
 
 import games.*;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Award {
+    static final Logger LOGGER = LogManager.getLogger(Biathlon.class);
+
     private String kindOfAward;
     private int prizeFund;
 
@@ -29,11 +33,11 @@ public class Award {
 
     public static void prizeDistribution(Sport sport) {
         switch (sport.getCurrentSport()) {
-            case "Biathlon" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
-            case "Cycling" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
-            case "Hockey" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
-            case "Skiing" -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
-            default -> System.out.println("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Biathlon" -> LOGGER.info("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Cycling" -> LOGGER.info("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Hockey" -> LOGGER.info("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            case "Skiing" -> LOGGER.info("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
+            default -> LOGGER.info("Team " + sport.getWinner() + " are rewarded with a trophy and $100,000");
         }
     }
 }

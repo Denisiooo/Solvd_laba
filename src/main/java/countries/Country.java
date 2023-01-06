@@ -3,24 +3,25 @@ package countries;
 import java.util.Objects;
 
 public class Country {
-    private String name;
+    private String countryName;
     private String city;
 
-    public Country(String name, String city) {
-        this.name = name;
+    public Country(String countryName, String city) {
+        this.countryName = countryName;
         this.city = city;
     }
 
-    public Country() {
 
-    }
+//    public Country() {
+//
+//    }
 
     public String getName() {
-        return name;
+        return countryName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String countryName) {
+        this.countryName = countryName;
     }
 
     public String getCity() {
@@ -34,7 +35,7 @@ public class Country {
     @Override
     public String toString() {
         return "Country" +
-                "name='" + name + '\'' +
+                "name='" + countryName + '\'' +
                 ", city='" + city;
     }
 
@@ -43,11 +44,11 @@ public class Country {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Country country = (Country) o;
-        return Objects.equals(name, country.name) && Objects.equals(city, country.city);
+        return Objects.equals(countryName, country.countryName) && Objects.equals(city, country.city);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, city);
+        return Objects.hash(countryName, city);
     }
 }
