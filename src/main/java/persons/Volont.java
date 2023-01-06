@@ -15,6 +15,5 @@ public enum Volont {
 
     public String getActivity(){
         return activity;
-
     }
 }
