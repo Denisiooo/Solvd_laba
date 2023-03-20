@@ -1,116 +1,27 @@
-2023-01-06 14:01:44,269 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:02:26,557 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:14:16,512 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:14:16,515 INFO GameStarting [main] 1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 14:15:07,700 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:15:07,704 INFO GameStarting [main] 
+2023-02-28 13:29:06,534 INFO GameStarting [main] What ticket will you bye: Vip, Usual
+2023-02-28 13:29:10,249 INFO GameStarting [main] Your ticketRate = VIP, place = VIP box', additionalServices = food, drinks, sofa, great view'}
+2023-02-28 13:29:10,250 INFO GameStarting [main] Choose a sport to start the competition: 
+2023-02-28 13:29:10,250 INFO GameStarting [main] 
 1 - Biathlon;
 2 - Cycling;
 3 - Hockey;
 4 - Skiing;
 5 - Volleyball.
-2023-01-06 14:15:14,056 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 14:15:14,057 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 14:15:14,060 INFO g.Biathlon [main] [Dragon, Centavr, Pegas, Orion]
-2023-01-06 14:15:14,060 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 14:15:14,061 INFO g.Biathlon [main] [Dragon, Orion]
-2023-01-06 14:15:14,062 INFO g.Biathlon [main] Competition winner is: Dragon
-2023-01-06 14:15:14,063 INFO r.Award [main] Team Dragon are rewarded with a trophy and $100,000
-2023-01-06 14:15:47,568 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:15:47,572 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 14:15:50,631 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 14:32:02,063 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:32:02,067 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 14:32:09,175 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 14:32:09,176 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 14:32:09,177 INFO g.Biathlon [main] [Kassiopea, Lion, Pegas, Orion]
-2023-01-06 14:32:09,178 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 14:32:09,178 INFO g.Biathlon [main] [Kassiopea, Orion]
-2023-01-06 14:32:09,179 INFO g.Biathlon [main] Competition winner is: Orion
-2023-01-06 14:32:09,180 INFO r.Award [main] Team Orion are rewarded with a trophy and $100,000
-2023-01-06 14:39:16,876 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:39:16,880 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 14:39:19,950 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 14:39:19,952 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 14:39:19,953 INFO g.Biathlon [main] [Kassiopea, Centavr, Pegas, Bear]
-2023-01-06 14:39:19,953 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 14:39:19,954 INFO g.Biathlon [main] [Centavr, Pegas]
-2023-01-06 14:39:19,954 INFO g.Biathlon [main] Competition winner is: Centavr
-2023-01-06 14:39:19,955 INFO r.Award [main] Team Centavr are rewarded with a trophy and $100,000
-2023-01-06 14:39:46,723 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 14:39:46,727 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 14:39:51,508 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 14:39:51,509 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 14:39:51,510 INFO g.Biathlon [main] [Kassiopea, Centavr, Vodoley, Orion]
-2023-01-06 14:39:51,511 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 14:39:51,511 INFO g.Biathlon [main] [Centavr, Vodoley]
-2023-01-06 14:39:51,511 INFO g.Biathlon [main] Competition winner is: Centavr
-2023-01-06 14:39:51,513 INFO r.Award [main] Team Centavr are rewarded with a trophy and $100,000
-2023-01-06 15:13:37,660 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 15:13:37,665 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 15:13:48,070 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 15:13:48,071 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 15:13:48,072 INFO g.Biathlon [main] [Dragon, Lion, Pegas, Orion]
-2023-01-06 15:13:48,073 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 15:13:48,073 INFO g.Biathlon [main] [Lion, Orion]
-2023-01-06 15:13:48,074 INFO g.Biathlon [main] Competition winner is: Orion
-2023-01-06 15:13:48,075 INFO r.Award [main] Team Orion are rewarded with a trophy and $100,000
-2023-01-06 15:50:25,246 INFO p.Referee [main] [Алексеев Артём, Алехин Матвей, Андреева Елизавета, Анисимов Глеб, Баранова София, Белова Дарья, Беляев Фёдор, Богданов Лев, Быкова София, Васильев Ярослав, Васильева Виктория, Васильева Екатерина, Вешнякова София, Винокурова София , Власов Даниил, Власова Вероника, Волкова Ирина, Воробьев Лев, Воробьева Полина, Воробьева Екатерина, Воронов Роман, Гаврилов Вадим, Галкин Семён, Герасимова София, Гончарова Вера, Грачев Дмитрий, Григорьева Анастасия, Гусев Илья, Гусев Максим, Гусева Ева, Дмитриев Сергей, Дорофеев Богдан, Дружинин Герман, Егорова Алина, Елисеев Кирилл, Жилина Дарья, Захарова Анна, Захарова Анастасия, Иванова Мирослава, Иванова Анна]
-2023-01-06 16:09:46,996 INFO p.Referee [main] [Алексеев Артём, Алехин Матвей, Андреева Елизавета, Анисимов Глеб, Баранова София, Белова Дарья, Беляев Фёдор, Богданов Лев, Быкова София, Васильев Ярослав, Васильева Виктория, Васильева Екатерина, Вешнякова София, Винокурова София , Власов Даниил, Власова Вероника, Волкова Ирина, Воробьев Лев, Воробьева Полина, Воробьева Екатерина, Воронов Роман, Гаврилов Вадим, Галкин Семён, Герасимова София, Гончарова Вера, Грачев Дмитрий, Григорьева Анастасия, Гусев Илья, Гусев Максим, Гусева Ева, Дмитриев Сергей, Дорофеев Богдан, Дружинин Герман, Егорова Алина, Елисеев Кирилл, Жилина Дарья, Захарова Анна, Захарова Анастасия, Иванова Мирослава, Иванова Анна]
-2023-01-06 16:16:27,883 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 16:16:27,887 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 16:16:30,941 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 16:16:30,941 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 16:16:30,942 INFO g.Biathlon [main] [Kassiopea, Lion, Pegas, Orion]
-2023-01-06 16:16:30,943 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 16:16:30,944 INFO g.Biathlon [main] [Lion, Orion]
-2023-01-06 16:16:30,944 INFO g.Biathlon [main] Competition winner is: Lion
-2023-01-06 16:16:30,946 INFO r.Award [main] Team Lion are rewarded with a trophy and $100,000
-2023-01-06 16:16:44,641 INFO GameStarting [main] Choose a sport to start the competition: 
-2023-01-06 16:16:44,645 INFO GameStarting [main] 
-1 - Biathlon;
-2 - Cycling;
-3 - Hockey;
-4 - Skiing;
-5 - Volleyball.
-2023-01-06 16:16:48,863 INFO GameStarting [main] You have chosen Biathlon
-2023-01-06 16:16:48,863 INFO g.Biathlon [main] Winners of the one-eighth final
-2023-01-06 16:16:48,864 INFO g.Biathlon [main] [Dragon, Centavr, Vodoley, Bear]
-2023-01-06 16:16:48,864 INFO g.Biathlon [main] Winners of the one-forth final
-2023-01-06 16:16:48,865 INFO g.Biathlon [main] [Dragon, Bear]
-2023-01-06 16:16:48,865 INFO g.Biathlon [main] Competition winner is: Bear
-2023-01-06 16:16:48,866 INFO r.Award [main] Team Bear are rewarded with a trophy and $100,000
+2023-02-28 13:29:24,376 INFO GameStarting [main] And now the game will start. You have chosen Biathlon
+2023-02-28 13:29:24,379 INFO g.Biathlon [main] We are glad to welcome you to the Olympic Games.
+2023-02-28 13:29:24,380 INFO g.Biathlon [main] Judge for one-eighth will be: 
+2023-02-28 13:29:24,383 INFO g.Biathlon [main] Judge for one-forth will be: 
+2023-02-28 13:29:24,384 INFO g.Biathlon [main] Judge for semi-final will be: 
+2023-02-28 13:29:24,389 INFO g.Biathlon [main] We also ask you to clap our volunteers from the department that deals with LOGISTICS. A total of 10677 people were involved for volunteering
+2023-02-28 13:29:24,391 INFO c.Country [main] This year the Olympiad will be held in Poland, city= Warsaw
+2023-02-28 13:29:24,396 INFO GameStarting [main] 
+Season of this sport: winter
+skiPolesLength=5
+minRifleWeight=10
+2023-02-28 13:29:24,397 INFO GameStarting [main] All teams that participate in the Olympiad:{1=Kassiopea, 2=Dragon, 3=Lion, 4=Centavr, 5=Vodoley, 6=Pegas, 7=Orion, 8=Bear}
+2023-02-28 13:29:24,397 INFO g.Biathlon [main] Winners of the one-eighth final
+2023-02-28 13:29:24,397 INFO g.Biathlon [main] {1=Dragon, 2=Centavr, 3=Pegas, 4=Bear}
+2023-02-28 13:29:24,398 INFO g.Biathlon [main] Winners of the one-forth final
+2023-02-28 13:29:24,398 INFO g.Biathlon [main] {1=Dragon, 2=Bear}
+2023-02-28 13:29:24,398 INFO g.Biathlon [main] Competition winner is: Dragon
+2023-02-28 13:29:24,400 INFO r.Award [main] Team Dragon are rewarded with a trophy and $100,000

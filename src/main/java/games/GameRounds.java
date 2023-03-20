@@ -4,6 +4,6 @@ import exceptions.TeamsNullException;
 
 public interface GameRounds {
     void oneEightFinal() throws TeamsNullException;
-    void oneForthFinal();
-    void semiFinal();
+    void oneForthFinal() throws TeamsNullException;
+    void semiFinal() throws TeamsNullException;
 }

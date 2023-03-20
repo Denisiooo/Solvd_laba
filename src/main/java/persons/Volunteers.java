@@ -1,14 +1,17 @@
 package persons;
 
 import countries.Country;
+import games.Biathlon;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 public class Volunteers extends Country {
-    private final static int numberOfVolunteers = 5000;
-    VoluntActivity volActivity;
-    Country country;
 
-    public Volunteers(String countryName, String city, VoluntActivity activity) {
-        super(countryName, city);
+    VoluntActivity volActivity;
+
+    public Volunteers(VoluntActivity activity) {
         volActivity = activity;
     }
 
@@ -16,7 +19,4 @@ public class Volunteers extends Country {
         return volActivity;
     }
 
-    public Country getCountry() {
-        return country;
-    }
 }

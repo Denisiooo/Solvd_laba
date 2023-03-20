@@ -1,8 +1,15 @@
 package countries;
 
-import java.util.Objects;
+import games.Biathlon;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.*;
 
 public class Country {
+
+    static final Logger LOGGER = LogManager.getLogger(Country.class);
+
     private String countryName;
     private String city;
 
@@ -11,10 +18,18 @@ public class Country {
         this.city = city;
     }
 
+    public Country() {
 
-//    public Country() {
-//
-//    }
+    }
+
+    static List<Country> countries = new LinkedList<>();
+
+    public static void randomCountry() {
+        countries = Arrays.asList(new Country("Belarus", "Minsk"), new Country("Russia", "Moscow"),
+                new Country("Poland", "Warsaw"), new Country("Brazil", "Brazilia"), new Country("Germany", "Berlin"));
+        Random rand = new Random();
+        LOGGER.info(countries.get(rand.nextInt(countries.size())));
+    }
 
     public String getName() {
         return countryName;
@@ -34,9 +49,7 @@ public class Country {
 
     @Override
     public String toString() {
-        return "Country" +
-                "name='" + countryName + '\'' +
-                ", city='" + city;
+        return "This year the Olympiad will be held in " + countryName + ", city= " + city;
     }
 
     @Override

@@ -65,7 +65,7 @@ public class Referee extends Person {
     }
 
     public static void randomName() {
-        String name = refereeNames.get((int) (Math.random() * 41));
+        String name = refereeNames.get((int) (Math.random() * 40));
         System.out.println(name);
     }
 
@@ -77,7 +77,6 @@ public class Referee extends Person {
 
     public static void main(String[] args) {
         System.out.println(refereeNames.size());
-//        LOGGER.info(); можно ли реализовать через логгер
         randomName();
     }
 }

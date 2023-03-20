@@ -5,7 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Award {
-    static final Logger LOGGER = LogManager.getLogger(Biathlon.class);
+    static final Logger LOGGER = LogManager.getLogger(Award.class);
 
     private String kindOfAward;
     private int prizeFund;

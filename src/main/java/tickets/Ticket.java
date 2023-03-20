@@ -1,37 +1,52 @@
 package tickets;
 
+import java.util.Map;
+
 public class Ticket {
-    private double ticketPrice;
-    private int numberOfTicketPlace;
-    private int classOfTicket;
+    TicketRate ticketRate;
+    private String place;
+    private String additionalServices;
 
-    public Ticket(double ticketPrice, int numberOfTicket, int classOfTicket) {
-        this.ticketPrice = ticketPrice;
-        this.numberOfTicketPlace = numberOfTicket;
-        this.classOfTicket = classOfTicket;
+    public Ticket(TicketRate ticketRate, String place, String additionalServices) {
+        this.ticketRate = ticketRate;
+        this.place = place;
+        this.additionalServices = additionalServices;
     }
 
-    public double getTicketPrice() {
-        return ticketPrice;
+    public static Map<TicketRate, Ticket> addTicketClass() {
+        return Map.of(TicketRate.USUAL, new Ticket(TicketRate.USUAL, "tribune", "no"),
+                TicketRate.VIP, new Ticket(TicketRate.VIP, "VIP box", "food, drinks, sofa, great view"));
     }
 
-    public void setTicketPrice(double ticketPrice) {
-        this.ticketPrice = ticketPrice;
+    public TicketRate getTicketRate() {
+        return ticketRate;
     }
 
-    public int getNumberOfTicketPlace() {
-        return numberOfTicketPlace;
+    public void setTicketRate(TicketRate ticketRate) {
+        this.ticketRate = ticketRate;
     }
 
-    public void setNumberOfTicketPlace(int numberOfTicketPlace) {
-        this.numberOfTicketPlace = numberOfTicketPlace;
+    public String getPlace() {
+        return place;
     }
 
-    public int getClassOfTicket() {
-        return classOfTicket;
+    public void setPlace(String place) {
+        this.place = place;
     }
 
-    public void setClassOfTicket(int classOfTicket) {
-        this.classOfTicket = classOfTicket;
+    public String getAdditionalServices() {
+        return additionalServices;
+    }
+
+    public void setAdditionalServices(String additionalServices) {
+        this.additionalServices = additionalServices;
+    }
+
+    @Override
+    public String toString() {
+        return "Your ticketRate = " + ticketRate +
+                ", place = " + place + '\'' +
+                ", additionalServices = " + additionalServices + '\'' +
+                '}';
     }
 }

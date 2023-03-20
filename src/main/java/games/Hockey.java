@@ -1,10 +1,15 @@
 package games;
 
+import countries.Country;
+import exceptions.TeamsNullException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import persons.Referee;
+import persons.VoluntActivity;
+import persons.Volunteers;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public final class Hockey extends Sport implements GameRounds {
     static final Logger LOGGER = LogManager.getLogger(Hockey.class);
@@ -12,15 +17,12 @@ public final class Hockey extends Sport implements GameRounds {
     private String nameOfTheGame;
     private int numberOfPlayers;
     private String season;
-    private String country;
-    private String winner;
 
-    public Hockey(String nameOfTheGame, int numberOfPlayers, String season, String country) {
+    public Hockey(String nameOfTheGame, int numberOfPlayers, String season) {
         super(nameOfTheGame);
         this.nameOfTheGame = nameOfTheGame;
         this.numberOfPlayers = numberOfPlayers;
         this.season = season;
-        this.country = country;
     }
 
     public Hockey() {
@@ -51,14 +53,6 @@ public final class Hockey extends Sport implements GameRounds {
         this.season = season;
     }
 
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getWinner() {
         return winner;
     }
@@ -67,23 +61,54 @@ public final class Hockey extends Sport implements GameRounds {
         this.winner = winner;
     }
 
-    List<String> allTeams = new ArrayList<>();
-    List<String> fourTeams = new ArrayList<>();
-    List<String> twoTeams = new ArrayList<>();
+    public List<String> getAllTeams() {
+        return allTeams;
+    }
+
+    public List<String> getFourTeams() {
+        return fourTeams;
+    }
+
+    public List<String> getTwoTeams() {
+        return twoTeams;
+    }
+
+    static {
+        LOGGER.info("We are glad to welcome you to the Olympic Games.");
+        LOGGER.info("Judge for one-eighth will be: ");
+        Referee.randomName();
+        LOGGER.info("Judge for one-forth will be: ");
+        Referee.randomName();
+        LOGGER.info("Judge for semi-final will be: ");
+        Referee.randomName();
+        Volunteers vol = new Volunteers(VoluntActivity.AWARDING);
+        LOGGER.info("We also ask you to clap our volunteers from the department that deals with " + vol.getVolActivity() + ". A total of " + VoluntActivity.generateRandomCount() + " people were involved for volunteering");
+        Country.randomCountry();
+    }
+
+    List<String> allTeams = new LinkedList<>();
+    List<String> fourTeams = new LinkedList<>();
+    List<String> twoTeams = new LinkedList<>();
 
     public void addTeam() {
-        allTeams.add("Kassiopea");
-        allTeams.add("Dragon");
-        allTeams.add("Lion");
-        allTeams.add("Centavr");
-        allTeams.add("Vodoley");
-        allTeams.add("Pegas");
-        allTeams.add("Orion");
-        allTeams.add("Bear");
+        allTeams.add("Dominators");
+        allTeams.add("Elite");
+        allTeams.add("Force");
+        allTeams.add("Hustle");
+        allTeams.add("Icons");
+        allTeams.add("Legends");
+        allTeams.add("Lightning");
+        allTeams.add("Masters");
     }
 
     @Override
-    public void oneEightFinal() {
+    public void oneEightFinal() throws TeamsNullException {
+        if (getAllTeams().size() < 8) {
+            throw new TeamsNullException("Numbers of teams should be eight");
+        }
+        List<String> list = allTeams.stream().map(String::toUpperCase).sorted().collect(Collectors.toList());
+        LOGGER.info("All teams that participate in the Olympiad:" + list + ":\nTotal count - " + list.stream().count());
+
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -110,15 +135,15 @@ public final class Hockey extends Sport implements GameRounds {
         }
         LOGGER.info("Winners of the one-eighth final");
         LOGGER.info(fourTeams);
-//        for (String s : fourTeams) {
-//            System.out.print(s + " ");
-//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
 
     @Override
-    public void oneForthFinal() {
+    public void oneForthFinal() throws TeamsNullException {
+        if (getFourTeams().size() < 4) {
+            throw new TeamsNullException("Numbers of teams should be four");
+        }
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -145,15 +170,15 @@ public final class Hockey extends Sport implements GameRounds {
         }
         LOGGER.info("Winners of the one-forth final");
         LOGGER.info(twoTeams);
-//        for (String s : twoTeams) {
-//            System.out.print(s + " ");
-//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
 
     @Override
-    public void semiFinal() {
+    public void semiFinal() throws TeamsNullException {
+        if (getTwoTeams().size() < 2) {
+            throw new TeamsNullException("Numbers of teams should be two");
+        }
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -179,5 +204,11 @@ public final class Hockey extends Sport implements GameRounds {
             }
         }
         LOGGER.info("Competition winner is: " + getWinner());
+    }
+
+    @Override
+    public String toString() {
+        return  "\nnumberOfPlayers: " + numberOfPlayers +
+                "\nseason of the sport: " + season;
     }
 }

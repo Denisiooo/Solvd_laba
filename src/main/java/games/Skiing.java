@@ -1,9 +1,15 @@
 package games;
 
+import countries.Country;
+import exceptions.TeamsNullException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import persons.Referee;
+import persons.VoluntActivity;
+import persons.Volunteers;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public final class Skiing extends Sport implements GameRounds {
@@ -11,15 +17,13 @@ public final class Skiing extends Sport implements GameRounds {
 
     private String nameOfTheGame;
     private String nameOfSkiing;
-    private String country;
     private String season;
     private String winner;
 
-    public Skiing(String nameOfTheGame, String nameOfSkiing, String season, String country) {
+    public Skiing(String nameOfTheGame, String nameOfSkiing, String season) {
         super(nameOfSkiing);
         this.nameOfTheGame = nameOfTheGame;
         this.nameOfSkiing = nameOfSkiing;
-        this.country = country;
         this.season = season;
     }
 
@@ -43,14 +47,6 @@ public final class Skiing extends Sport implements GameRounds {
         this.nameOfSkiing = nameOfSkiing;
     }
 
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getSeason() {
         return season;
     }
@@ -67,23 +63,53 @@ public final class Skiing extends Sport implements GameRounds {
         this.winner = winner;
     }
 
+    public List<String> getAllTeams() {
+        return allTeams;
+    }
+
+    public List<String> getFourTeams() {
+        return fourTeams;
+    }
+
+    public List<String> getTwoTeams() {
+        return twoTeams;
+    }
+
+    static {
+        LOGGER.info("We are glad to welcome you to the Olympic Games.");
+        LOGGER.info("Judge for one-eighth will be: ");
+        Referee.randomName();
+        LOGGER.info("Judge for one-forth will be: ");
+        Referee.randomName();
+        LOGGER.info("Judge for semi-final will be: ");
+        Referee.randomName();
+        Volunteers vol = new Volunteers(VoluntActivity.DOPING_CONTROL);
+        LOGGER.info("We also ask you to clap our volunteers from the department that deals with " + vol.getVolActivity() + ". A total of " + VoluntActivity.generateRandomCount() + " people were involved for volunteering");
+        Country.randomCountry();
+    }
+
     List<String> allTeams = new ArrayList<>();
     List<String> fourTeams = new ArrayList<>();
     List<String> twoTeams = new ArrayList<>();
 
     public void addTeam() {
-        allTeams.add("Kassiopea");
-        allTeams.add("Dragon");
-        allTeams.add("Lion");
-        allTeams.add("Centavr");
-        allTeams.add("Vodoley");
-        allTeams.add("Pegas");
-        allTeams.add("Orion");
-        allTeams.add("Bear");
+        allTeams.add("Ninjas");
+        allTeams.add("Outliers");
+        allTeams.add("Power");
+        allTeams.add("Rebels");
+        allTeams.add("Revolution");
+        allTeams.add("Ringmasters");
+        allTeams.add("Squad");
+        allTeams.add("Titans");
     }
 
     @Override
-    public void oneEightFinal() {
+    public void oneEightFinal() throws TeamsNullException {
+        if (getAllTeams().size() < 8) {
+            throw new TeamsNullException("Numbers of teams should be eight");
+        }
+        allTeams.stream().sorted().forEach(System.out::print);
+        LOGGER.info("All teams that participate in the Olympiad:" + allTeams);
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -110,15 +136,15 @@ public final class Skiing extends Sport implements GameRounds {
         }
         LOGGER.info("Winners of the one-eighth final");
         LOGGER.info(fourTeams);
-//        for (String s : fourTeams) {
-//            System.out.print(s + " ");
-//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
 
     @Override
-    public void oneForthFinal() {
+    public void oneForthFinal() throws TeamsNullException {
+        if (getFourTeams().size() < 4) {
+            throw new TeamsNullException("Numbers of teams should be four");
+        }
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -145,15 +171,15 @@ public final class Skiing extends Sport implements GameRounds {
         }
         LOGGER.info("Winners of the one-forth final");
         LOGGER.info(twoTeams);
-//        for (String s : twoTeams) {
-//            System.out.print(s + " ");
-//        }
         System.out.println();
         System.out.println("---------------------------------------------------------------");
     }
 
     @Override
-    public void semiFinal() {
+    public void semiFinal() throws TeamsNullException {
+        if (getTwoTeams().size() < 2) {
+            throw new TeamsNullException("Numbers of teams should be two");
+        }
         int count1 = 0;
         int count2 = 1;
         String firstTeam;
@@ -179,5 +205,11 @@ public final class Skiing extends Sport implements GameRounds {
             }
         }
         LOGGER.info("Competition winner is: " + getWinner());
+    }
+
+    @Override
+    public String toString() {
+        return "\nnameOfSkiing: " + nameOfSkiing +
+                "\nseason of the sport: " + season;
     }
 }
